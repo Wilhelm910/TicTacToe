@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,80 @@
     <title>TicTacToe</title>
     <script src="./script.js"></script>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./fonts.css">
 </head>
+
 <body>
-    
+    <div class="table-container">
+        <div class="game-status">
+            <div id="new-game-btn" class="d-none" onclick="newGame()"><b>New Game</b></div>
+            <div class="player-container">
+                <div>
+                    <p>Player 1</p>
+                    <div id="player-cross" class="img-container"><img class="img" src="./img/cross.png"></div>
+                </div>
+                <div>
+                    <p>Player 2</p>
+                    <div id="player-circle" class="img-container bg"><img class="img" src="./img/circle.png"></div>
+                </div>
+            </div>
+        </div>
+        <div id="game-over-container" class="d-none"><img class="game-over" src="./img/game-over.png"></div>
+        <div class="position">
+            <div id="line_0" class="horizontal-line" style="top:70px"></div>
+            <div id="line_1" class="horizontal-line" style="top:225px"></div>
+            <div id="line_2" class="horizontal-line" style="top:378px"></div>
+            <div id="line_3" class="horizontal-line vertikal" style="left:-125px"></div>
+            <div id="line_4" class="horizontal-line vertikal" style="left:30px"></div>
+            <div id="line_5" class="horizontal-line vertikal" style="left:184px"></div>
+            <div id="line_6" class="horizontal-line incline1" style="left:35px; transform: rotate(135deg) scaleX(0.0)"></div>
+            <div id="line_7" class="horizontal-line incline2" style="left:30px; transform: rotate(45deg) scaleX(0.0)"></div>
+            <table id="table">
+                <tr>
+                    <td onclick="symbolToArray(0)" id="field_0">
+                        <img id="circle_0" class="game-symbols d-none" src="./img/circle.png">
+                        <img id="cross_0" class="game-symbols d-none" src="./img/cross.png">
+                    </td>
+                    <td onclick="symbolToArray(1)" id="field_1">
+                        <img id="circle_1" class="game-symbols d-none" src="./img/circle.png">
+                        <img id="cross_1" class="game-symbols d-none" src="./img/cross.png">
+                    </td>
+                    <td onclick="symbolToArray(2)" id="field_2">
+                        <img id="circle_2" class="game-symbols d-none" src="./img/circle.png">
+                        <img id="cross_2" class="game-symbols d-none" src="./img/cross.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td onclick="symbolToArray(3)" id="field_3">
+                        <img id="circle_3" class="game-symbols d-none" src="./img/circle.png">
+                        <img id="cross_3" class="game-symbols d-none" src="./img/cross.png">
+                    </td>
+                    <td onclick="symbolToArray(4)" id="field_4">
+                        <img id="circle_4" class="game-symbols d-none" src="./img/circle.png">
+                        <img id="cross_4" class="game-symbols d-none" src="./img/cross.png">
+                    </td>
+                    <td onclick="symbolToArray(5)" id="field_5">
+                        <img id="circle_5" class="game-symbols d-none" src="./img/circle.png">
+                        <img id="cross_5" class="game-symbols d-none" src="./img/cross.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td onclick="symbolToArray(6)" id="field_6">
+                        <img id="circle_6" class="game-symbols d-none" src="./img/circle.png">
+                        <img id="cross_6" class="game-symbols d-none" src="./img/cross.png">
+                    </td>
+                    <td onclick="symbolToArray(7)" id="field_7">
+                        <img id="circle_7" class="game-symbols d-none" src="./img/circle.png">
+                        <img id="cross_7" class="game-symbols d-none" src="./img/cross.png">
+                    </td>
+                    <td onclick="symbolToArray(8)" id="field_8">
+                        <img id="circle_8" class="game-symbols d-none" src="./img/circle.png">
+                        <img id="cross_8" class="game-symbols d-none" src="./img/cross.png">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </body>
+
 </html>
